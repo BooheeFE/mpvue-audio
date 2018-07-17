@@ -5,25 +5,25 @@
         class="btn_pre"
         v-if="is_show_pre && !play_status"
         @click="onClickPre"
-        src="../../static/images/ic_pre.png"
+        src="../../static/images/ic_audio_pre.png"
       >
         <img
           class="btn_next"
           v-if="is_show_next && !play_status"
           @click="onClickNext"
-          src="../../static/images/ic_next.png"
+          src="../../static/images/ic_audio_next.png"
         >
           <img
             class="btn_play"
             v-if="play_status"
             @click="onClickPlay"
-            src="../../static/images/ic_play.png"
+            src="../../static/images/ic_audio_play.png"
           >
             <img
               class="btn_play"
               v-if="!play_status"
               @click="onClickPause"
-              src="../../static/images/ic_pause.png"
+              src="../../static/images/ic_audio_pause.png"
             >
               <div class="progress">
                 <p class="text-left">{{progress}}</p>
