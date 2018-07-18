@@ -1,5 +1,13 @@
 # mpvue-audio
 
+mpvue 微信小程序 音频播放组件
+
+## 安装
+
+```
+npm install mpvue-audio --save
+```
+
 ## 可用属性
 
 |参数|说明|类型|默认值|
