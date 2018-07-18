@@ -10,11 +10,11 @@
 
 ### task说明
 
-|参数|说明|类型|默认值|
-|---|---|---|---|
-|content_url|音频地址|String|''|
+|参数|说明|类型|
+|---|---|---|
+|content_url|音频地址|String|
 |title|标题|String|''|
-|coverImgUrl|封面地址|String|''|
+|coverImgUrl|封面地址|String|
 
 
 
