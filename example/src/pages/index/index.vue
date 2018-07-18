@@ -50,12 +50,18 @@ export default {
     },
     clickHandle(msg, ev) {
       console.log('clickHandle:', msg, ev)
+    },
+    initTask() {
+      this.task.content_url = 'https://raw.githubusercontent.com/Baifann/mpvue-audio/master/assets/audio/wind.mp3'
+      this.task.content_cover_url = 'https://raw.githubusercontent.com/Baifann/mpvue-audio/master/assets/img/wind.jpg'
+      this.task.title = '起风了'
     }
   },
 
   created() {
     // 调用应用实例的方法获取全局数据
     this.getUserInfo()
+    this.initTask()
   }
 }
 </script>
