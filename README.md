@@ -35,6 +35,7 @@ npm install mpvue-audio --save
 ```
 
 ```js
+<script>
 import MyAudio from 'mpvue-audio'
 
 export default {
