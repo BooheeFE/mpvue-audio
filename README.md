@@ -22,7 +22,7 @@ npm install mpvue-audio --save
 |---|---|---|
 |content_url|音频地址|String|
 |title|标题|String|''|
-|coverImgUrl|封面地址|String|
+|content_cover_url|封面地址|String|
 
 ## 使用
 
