@@ -24,5 +24,45 @@ npm install mpvue-audio --save
 |title|标题|String|''|
 |coverImgUrl|封面地址|String|
 
+## 使用
+
+```html
+<template>
+  <div class="audio-container">
+    <my-audio :task="task" />
+  </div>
+</template>
+```
+
+```js
+import MyAudio from 'mpvue-audio'
+
+export default {
+  data() {
+    return {
+      task: {}
+    }
+  },
+
+  components: {
+    MyAudio
+  },
+
+  methods: {
+    //...省略
+
+    initTask() {
+      this.task.content_url = 'http://example.mp3'
+      this.task.content_cover_url = 'http://example.png'
+      this.task.title = 'example'
+    }
+  },
+
+  created() {
+    this.initTask()
+  }
+}
+</script>
+```
 
 
