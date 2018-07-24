@@ -1,49 +1,37 @@
 <template>
   <div class="audio">
     <div :class="['cover-bg', play_status?'gray-bg':'normal-bg']">
-      <img
-        class="btn_pre"
-        v-if="is_show_pre && !play_status"
-        @click="onClickPre"
-        src="../../static/images/ic_audio_pre.png"
-      >
-        <img
-          class="btn_next"
-          v-if="is_show_next && !play_status"
-          @click="onClickNext"
-          src="../../static/images/ic_audio_next.png"
-        >
-          <img
-            class="btn_play"
-            v-if="play_status"
-            @click="onClickPlay"
-            src="../../static/images/ic_audio_play.png"
-          >
-            <img
-              class="btn_play"
-              v-if="!play_status"
-              @click="onClickPause"
-              src="../../static/images/ic_audio_pause.png"
-            >
-              <div class="progress">
-                <p class="text-left">{{progress}}</p>
-                <slider
-                  block-color="rgba(0,229,155,1)"
-                  @change="sliderChange"
-                  activeColor="rgba(0,229,155,0.9)"
-                  backgroundColor="#ffffff"
-                  :value="slide"
-                  min="0"
-                  :max="origin_length+1"
-                  block-size="12"
-                />
-                <p class="text-right">{{audio_length}}</p>
-              </div>
+      <img class="btn_pre"
+           v-if="is_show_pre && !play_status"
+           @click="onClickPre"
+           :src="pre_img" />
+      <img class="btn_next"
+           v-if="is_show_next && !play_status"
+           @click="onClickNext"
+           :src="next_img" />
+      <img class="btn_play"
+           v-if="play_status"
+           @click="onClickPlay"
+           :src="play_img" />
+      <img class="btn_play"
+           v-if="!play_status"
+           @click="onClickPause"
+           :src="pause_img" />
+      <div class="progress">
+        <p class="text-left">{{progress}}</p>
+        <slider block-color="rgba(0,229,155,1)"
+                @change="sliderChange"
+                activeColor="rgba(0,229,155,0.9)"
+                backgroundColor="#ffffff"
+                :value="slide"
+                min="0"
+                :max="origin_length+1"
+                block-size="12" />
+        <p class="text-right">{{audio_length}}</p>
+      </div>
     </div>
-    <img
-      class="cover"
-      :src="play_task ? play_task.content_cover_url:''"
-    />
+    <img class="cover"
+         :src="play_task ? play_task.content_cover_url:''" />
   </div>
 </template>
 
@@ -59,6 +47,22 @@ export default {
       default: () => {
         return []
       }
+    },
+    play_img: {
+      type: String,
+      default: '../../static/images/ic_audio_play.png'
+    },
+    pause_img: {
+      type: String,
+      default: '../../static/images/ic_audio_pause.png'
+    },
+    next_img: {
+      type: String,
+      default: '../../static/images/ic_audio_next.png'
+    },
+    pre_img: {
+      type: String,
+      default: '../../static/images/ic_audio_pre.png'
     }
   },
 
