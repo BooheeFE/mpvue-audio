@@ -1,0 +1,16 @@
+{
+  "name": "mpvue-audio",
+  "main": "src/components/audio.vue",
+  "version": "1.0.1",
+  "author": "baifann",
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "mpvue",
+    "audio"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baifann/mpvue-audio.git"
+  }
+}
