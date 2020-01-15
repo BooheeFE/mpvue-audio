@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="audio">
     <div :class="['cover-bg', play_status?'gray-bg':'normal-bg']">
       <img class="btn_pre"
@@ -50,19 +50,19 @@ export default {
     },
     play_img: {
       type: String,
-      default: '../../static/images/ic_audio_play.png'
+      default: require('../../static/images/ic_audio_play.png')
     },
     pause_img: {
       type: String,
-      default: '../../static/images/ic_audio_pause.png'
+      default: require('../../static/images/ic_audio_pause.png')
     },
     next_img: {
       type: String,
-      default: '../../static/images/ic_audio_next.png'
+      default: require('../../static/images/ic_audio_next.png')
     },
     pre_img: {
       type: String,
-      default: '../../static/images/ic_audio_pre.png'
+      default: require('../../static/images/ic_audio_pre.png')
     }
   },
 
